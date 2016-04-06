@@ -15,13 +15,25 @@ function EventController($scope) {
         imageUrl: 'img/angularjs-logo.png',
         sessions: [
             {
-                name: 'Directives Masterclass'
+                name: 'Directives Masterclass',
+                creatorName: 'Bob Jones',
+                duration: '1 hr',
+                level: 'Advanced',
+                abstract: 'In this module, we learned about roller skates.'
             },
             {
-                name: 'Scopes for fun and profit'  
+                name: 'Scopes for fun and profit',
+                creatorName: 'Bill Doe',
+                duration: '3 hours',
+                level: 'Intermediate',
+                abstract: 'This is something not so hard.'
             },
             {
-                name: 'Well Behaved Controllers'    
+                name: 'Well Behaved Controllers',
+                creatorName: 'Pee Wee Herman',
+                duration: '30 minutes',
+                level: 'Easy',
+                abstract: 'This is supposed to be fun.'
             }
         ]
     }
