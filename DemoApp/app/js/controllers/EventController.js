@@ -19,22 +19,34 @@ function EventController($scope) {
                 creatorName: 'Bob Jones',
                 duration: '1 hr',
                 level: 'Advanced',
-                abstract: 'In this module, we learned about roller skates.'
+                abstract: 'In this module, we learned about roller skates.',
+                upVoteCount: 0
             },
             {
                 name: 'Scopes for fun and profit',
                 creatorName: 'Bill Doe',
                 duration: '3 hours',
                 level: 'Intermediate',
-                abstract: 'This is something not so hard.'
+                abstract: 'This is something not so hard.',
+                upVoteCount: 0
             },
             {
                 name: 'Well Behaved Controllers',
                 creatorName: 'Pee Wee Herman',
                 duration: '30 minutes',
                 level: 'Easy',
-                abstract: 'This is supposed to be fun.'
+                abstract: 'This is supposed to be fun.',
+                upVoteCount: 0
             }
         ]
+    }
+
+    $scope.upVoteSession = function(session) {
+        session.upVoteCount++;
+    }
+    $scope.downVoteSession = function (session) {
+        if (session.upVoteCount >= 1) {
+            session.upVoteCount--;
+        }
     }
 }
