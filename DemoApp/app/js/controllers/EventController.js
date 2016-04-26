@@ -3,10 +3,12 @@
 eventsApp.controller('EventController', EventController);
 
 function EventController($scope) {
+    $scope.sortorder = 'name';
     $scope.event = {
         name: 'Angular Boot Camp',
-        date: '1/1/2013',
+        date: 1359781015626,
         time: '10:30 am',
+        price: 250.12,
         location: {
             address: 'Google Headquarters',
             city: 'Mountain View',
@@ -49,4 +51,9 @@ function EventController($scope) {
             session.upVoteCount--;
         }
     }
+
+    $scope.snippet = '<span style="color:red">Parker Lewis can\'t loose.</span><script>alert("Poke");<script>';
+
+    $scope.myStyle = { color: 'red' };
+    $scope.myClass = "blueClass";
 }
